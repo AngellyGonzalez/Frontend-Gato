@@ -94,18 +94,29 @@ body {
 </div>
 
 <!-- ========== TARJETAS DE GATOS (derecha) ========== -->
-<div class="container mt-4">
-  <!-- Fila superior: Título a la izquierda, Buscador y Actualizar a la derecha -->
-  <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 mb-3">
-    <h2 class="mb-0">Gatos Registrados</h2>
-    <div class="d-flex gap-2 flex-grow-1 flex-md-grow-0" style="max-width: 450px;">
-      <input type="search" class="form-control form-control-sm" id="inputBusqueda" placeholder="...">
-      <button class="btn btn-outline-secondary btn-sm text-nowrap" id="btnRecargar">Actualizar</button>
-    </div>
-  </div>
+<div class="col-lg-8">
+      
+      <!-- Cabecera y Buscador arriba -->
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3">
+        <h2 class="mb-0">Gatos Registrados</h2>
 
-  <!-- Contenedor de las tarjetas abajo del buscador -->
-  <div class="row g-3" id="listaGatos"></div>
+        <div class="d-flex gap-2" style="width: 350px; max-width: 100%;">
+          <input type="search" class="form-control form-control-sm" id="inputBusqueda"
+            placeholder="Buscar por nombre, raza...">
+          <button class="btn btn-outline-secondary btn-sm text-nowrap" id="btnRecargar" title="Mostrar todos">
+            Actualizar
+          </button>
+        </div>
+      </div>
+
+      <!-- Contenedor donde se cargarán las tarjetas de los gatos -->
+      <div class="row g-3" id="listaGatos">
+        <!-- Los gatos se inyectarán aquí dinámicamente -->
+      </div>
+
+    </div>
+
+  </div>
 </div>
 
 <script>
